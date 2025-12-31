@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Documents Dynamiques</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Upload de PDFs</h1>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".pdf" required>
+        <button type="submit">Upload PDF</button>
+    </form>
+
+    <h2>PDFs disponibles (téléchargeables)</h2>
+    <ul>
+        <% pdfs.forEach(pdf => { %>
+            <li><a href="/download/<%= pdf %>"><%= pdf %></a></li>
+        <% }) %>
+    </ul>
+
+    <h2>Images disponibles</h2>
+    <div style="display:flex; flex-wrap: wrap;">
+        <% images.forEach(img => { %>
+            <div style="margin:5px;">
+                <img src="<%= img.url %>" alt="<%= img.name %>" width="120">
+            </div>
+        <% }) %>
+    </div>
+</body>
+</html>
