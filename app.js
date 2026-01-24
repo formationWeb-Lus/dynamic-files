@@ -58,6 +58,11 @@ const images = [
 ];
 
 // ================= ROUTES =================
+// je suis enfant de die
+
+// 
+
+//------------------
 
 // Home
 app.get('/', (req, res) => {
