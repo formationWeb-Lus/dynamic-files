@@ -18,30 +18,33 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage });
 
-// ================= IMAGES (simulation table SQL) =================
 const images = [
-    // EXISTING IMAGES
+    // EXISTING IMAGES (remplacées si elles correspondent à tes liens)
+    { name: 'basededonnees', url: 'https://raw.githubusercontent.com/formationWeb-Lus/coderise-images/main/images/basededonnees.jpg' },
+    { name: 'MVCContenu', url: 'https://raw.githubusercontent.com/formationWeb-Lus/coderise-images/main/images/MVCetLivraisondeContenu.jpg' },
+    { name: 'OAuthSecuriteAPI', url: 'https://raw.githubusercontent.com/formationWeb-Lus/coderise-images/main/images/OAuthetS%C3%A9curit%C3%A9desAPI.jpg' },
+    { name: 'Programmation', url: 'https://raw.githubusercontent.com/formationWeb-Lus/coderise-images/main/images/Programmation.jpg' },
+    { name: 'ProgrammationFonctionsIntro', url: 'https://raw.githubusercontent.com/formationWeb-Lus/coderise-images/main/images/ProgrammationaveclesFonctionsIntroduction.png' },
+    { name: 'RESTValidation', url: 'https://raw.githubusercontent.com/formationWeb-Lus/coderise-images/main/images/RESTAlternativesetValidation.jpg' },
+    { name: 'ReactFondamentaux', url: 'https://raw.githubusercontent.com/formationWeb-Lus/coderise-images/main/images/ReactFondamentauxetProjetsInitiaux.jpg' },
+    { name: 'HTTPDocumentationAPI', url: 'https://raw.githubusercontent.com/formationWeb-Lus/coderise-images/main/images/Requ%C3%AAtesHTTPetDocumentationdAPI.jpg' },
+    { name: 'TestsDebugErreurs', url: 'https://raw.githubusercontent.com/formationWeb-Lus/coderise-images/main/images/TestsD%C3%A9bogageetGestiondesErreurs.jpg' },
+    { name: 'WDD130', url: 'https://raw.githubusercontent.com/formationWeb-Lus/coderise-images/main/images/WDD130WebFundamentals.jpg' },
+    { name: 'WebBackend', url: 'https://raw.githubusercontent.com/formationWeb-Lus/coderise-images/main/images/Web-Backend.jpg' },
+    { name: 'WebFrontend', url: 'https://raw.githubusercontent.com/formationWeb-Lus/coderise-images/main/images/WebFrontend.jpg' },
+    { name: 'WebFullStackIntro', url: 'https://raw.githubusercontent.com/formationWeb-Lus/coderise-images/main/images/WebFull-StackD%C3%A9veloppementIntroduction.png' },
+    { name: 'basededonnees2', url: 'https://raw.githubusercontent.com/formationWeb-Lus/coderise-images/main/images/basededonnees.jpg' }, // si tu veux garder une double occurrence
+
+    // AUTRES IMAGES (NE TOUCHER PAS)
     { name: 'AppelCreationFonctions', url: 'https://github.com/formationWeb-Lus/coderise-images/blob/main/images/AppelCr%C3%A9ationdeFonctions.jpg?raw=true' },
     { name: 'AuthentificationAutorisation', url: 'https://github.com/formationWeb-Lus/coderise-images/blob/main/images/AuthentificationetAutorisation.jpg?raw=true' },
     { name: 'CSharp', url: 'https://github.com/formationWeb-Lus/coderise-images/blob/main/images/CSharp.png?raw=true' },
     { name: 'InsertionValidationDonnees', url: 'https://github.com/formationWeb-Lus/coderise-images/blob/main/images/InsertionetValidationdesDonn%C3%A9es.png?raw=true' },
-    { name: 'IntroductionPython', url: 'https://github.com/formationWeb-Lus/coderise-images/blob/main/images/Introduction%20%C3%A0%20Python.jpg?raw=true' },
     { name: 'IntroductionProgrammation', url: 'https://github.com/formationWeb-Lus/coderise-images/blob/main/images/Introduction%C3%A0laProgrammation.jpg?raw=true' },
     { name: 'JavaScriptAvance', url: 'https://github.com/formationWeb-Lus/coderise-images/blob/main/images/JavaScriptAvanc%C3%A9.jpg?raw=true' },
-    { name: 'MVCContenu', url: 'https://github.com/formationWeb-Lus/coderise-images/blob/main/images/MVCetLivraisondeContenu.jpg?raw=true' },
-    { name: 'OAuthSecuriteAPI', url: 'https://github.com/formationWeb-Lus/coderise-images/blob/main/images/OAuthetS%C3%A9curit%C3%A9desAPI.jpg?raw=true' },
-    { name: 'ProgrammationFonctionsIntro', url: 'https://github.com/formationWeb-Lus/coderise-images/blob/main/images/Pr4ogrammationaveclesFonctionsIntroduction.png?raw=true' },
     { name: 'ProgrammationAvanceeCSharp', url: 'https://github.com/formationWeb-Lus/coderise-images/blob/main/images/ProgrammationAvanc%C3%A9eeC%23.png?raw=true' },
-    { name: 'RESTValidation', url: 'https://github.com/formationWeb-Lus/coderise-images/blob/main/images/RESTAlternativesetValidation.jpg?raw=true' },
-    { name: 'ReactFondamentaux', url: 'https://github.com/formationWeb-Lus/coderise-images/blob/main/images/ReactFondamentauxetProjetsInitiaux.jpg?raw=true' },
-    { name: 'HTTPDocumentationAPI', url: 'https://github.com/formationWeb-Lus/coderise-images/blob/main/images/Requ%C3%AAtesHTTPetDocumentationdAPI.jpg?raw=true' },
-    { name: 'TestsDebugErreurs', url: 'https://github.com/formationWeb-Lus/coderise-images/blob/main/images/TestsD%C3%A9bogageetGestiondesErreurs.jpg?raw=true' },
-    { name: 'WDD130', url: 'https://github.com/formationWeb-Lus/coderise-images/blob/main/images/WDD130WebFundamentals.jpg?raw=true' },
-    { name: 'WebBackend', url: 'https://github.com/formationWeb-Lus/coderise-images/blob/main/images/Web-Backend.jpg?raw=true' },
-    { name: 'WebFrontend', url: 'https://github.com/formationWeb-Lus/coderise-images/blob/main/images/WebFrontend.jpg?raw=true' },
-    { name: 'WebFullStackIntro', url: 'https://github.com/formationWeb-Lus/coderise-images/blob/main/images/WebFull-StackD%C3%A9veloppementIntroduction.png?raw=true' },
 
-    // NEW IMAGES (FROM image/ FOLDER)
+    // NEW IMAGES (FROM image/ FOLDER) ← NE PAS TOUCHER
     { name: 'API', url: 'https://github.com/formationWeb-Lus/coderise-images/blob/main/image/api.png?raw=true' },
     { name: 'ArtificialIntelligence', url: 'https://github.com/formationWeb-Lus/coderise-images/blob/main/image/artificial-intelligence-8953936_1280.png?raw=true' },
     { name: 'BigData', url: 'https://github.com/formationWeb-Lus/coderise-images/blob/main/image/big-data-7216839_1280.png?raw=true' },
@@ -56,7 +59,6 @@ const images = [
     { name: 'LearningSession', url: 'https://github.com/formationWeb-Lus/coderise-images/blob/main/image/pexels-shkrabaanthony-5475793.jpg?raw=true' },
     { name: 'TestingErrors', url: 'https://github.com/formationWeb-Lus/coderise-images/blob/main/image/testin%20error.png?raw=true' }
 ];
-
 // ================= ROUTES =================
 // je suis enfant de die
 
