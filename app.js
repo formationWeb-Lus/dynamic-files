@@ -36,10 +36,10 @@ const images = [
     { name: 'basededonnees2', url: 'https://raw.githubusercontent.com/formationWeb-Lus/coderise-images/main/images/basededonnees.jpg' }, // si tu veux garder une double occurrence
 
     // AUTRES IMAGES (NE TOUCHER PAS)
-    { name: 'AppelCreationFonctions', url: 'https://github.com/formationWeb-Lus/coderise-images/blob/main/images/AppelCr%C3%A9ationdeFonctions.jpg?raw=true' },
+    { name: 'AppelCreationFonctions', url: 'https://github.com/formationWeb-Lus/coderise-images/blob/main/images/AppelCr%C3%A9ationdeFonctions.jpg' },
     { name: 'AuthentificationAutorisation', url: 'https://github.com/formationWeb-Lus/coderise-images/blob/main/images/AuthentificationetAutorisation.jpg?raw=true' },
     { name: 'CSharp', url: 'https://github.com/formationWeb-Lus/coderise-images/blob/main/images/CSharp.png?raw=true' },
-    { name: 'InsertionValidationDonnees', url: 'https://github.com/formationWeb-Lus/coderise-images/blob/main/images/InsertionetValidationdesDonn%C3%A9es.png?raw=true' },
+    { name: 'InsertionValidationDonnees', url: 'https://github.com/formationWeb-Lus/coderise-images/blob/main/images/Introduction%20%C3%A0%20Python.jpg' },
     { name: 'IntroductionProgrammation', url: 'https://github.com/formationWeb-Lus/coderise-images/blob/main/images/Introduction%C3%A0laProgrammation.jpg?raw=true' },
     { name: 'JavaScriptAvance', url: 'https://github.com/formationWeb-Lus/coderise-images/blob/main/images/JavaScriptAvanc%C3%A9.jpg?raw=true' },
     { name: 'ProgrammationAvanceeCSharp', url: 'https://github.com/formationWeb-Lus/coderise-images/blob/main/images/ProgrammationAvanc%C3%A9eeC%23.png?raw=true' },
